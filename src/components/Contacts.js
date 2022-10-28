@@ -3,37 +3,6 @@ import { ReactComponent as MailIcon } from "../icons/MailIcon.svg";
 import { ReactComponent as PhoneIcon } from "../icons/PhoneIcon.svg";
 import { ReactComponent as WebsiteIcon } from "../icons/WebsiteIcon.svg";
 
-
-
-const contact =
-[
-{
-  id: 7,
-  name: "Cat",
-  username: "Cat123",
-  email: "email.com",
-  address:
-  {
-    street: "street",
-    suite: "suite",
-    city: "howemouth",
-    zipcode: "566",
-  },
-  geo:
-  {
-    lat: "",
-    lng: "",
-  },
-  phone: "phone",
-  website: "website",
-  company: {
-    name: "name",
-    catchPhrase: "catch",
-    bs: "gen"
-  },
-},
-];
-
 const ContactCard = (props) =>
 {
     const
@@ -47,6 +16,7 @@ const ContactCard = (props) =>
         website,
         company
     } = props;
+
     return (
         <div className="centered-flex contact--card">
             <div className="contact--card-details">
@@ -75,14 +45,13 @@ const ContactCard = (props) =>
                     </a>
                 </div>
             </div>
-
         </div>
     )
-}
+};
 
 export const Contacts = () =>
 {
-    const [contacts, setContacts] = useState(contact);
+    const [contacts, setContacts] = useState([]);
     const requestURL = "https://jsonplaceholder.typicode.com/users";
 
     useEffect(() =>
