@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* {
+  margin: none;
+  padding: none;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-image: url("./background/background-1.jpg");
+  background-position: center;
+}
+
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container--main {
+  width: 60vw;
+  height: 100vh;
+}
+
+.container--home {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5em;
+}
+
+.container--home h1 {
+  margin: 0;
+  font-size: 66px;
+  font-weight: 300;
+}
+
+.container--navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 15%;
+  height: 100%;
+  padding: 1em;
+
+}
+
+.navbar--item {
+  margin: 1em;
+}
+
+.container--contacts {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2em;
+  overflow: scroll;
+}
+
+.contact--card {
+  width: 95%;
+  height: 30%;
+  background: inherit;
+  flex-direction: row;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: rgb(36, 17, 17);
+  padding: 0.3em 0 1em 0;
+  background-color: rgba(255, 255, 255, .2);  
+  backdrop-filter: blur(10px);
+}
+
+.contact--card-details {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact--card-links {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.contact--card-details h1 {
+  font-weight: 400;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 28px;
+}
+
+.contact--card-details h3 {
+  font-weight: 300;
+  font-size: 12;
+  padding: 0.3em 0 0.3em 0;
+  margin: 0;
+}
+
+.navbar--icons {
+  width: 50px;
+  cursor: pointer;
+}
+
+.contact--icons {
+  width: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container--main {
+    width: 100vw;
+  }
+}
